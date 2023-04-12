@@ -5,7 +5,7 @@ from utils import *
 
 
 # # splits on x1 then x2 then ... then xn
-def worst_case(truth_table):
+def random_split(truth_table):
     # returns the root node #
     # bag:          rows of truth tables to be classified still (values)
     # remaining:    attributes not on path above (indexes from 1)

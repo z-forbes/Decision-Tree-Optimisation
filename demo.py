@@ -35,7 +35,7 @@ algorithms.append(optimal)
 algorithms.append(c45)
 # algorithms.append(cart)
 # algorithms.append(double_id3)
-algorithms.append(worst_case)
+# algorithms.append(random_split)
 
 for a in algorithms:
     t = a(tt)
