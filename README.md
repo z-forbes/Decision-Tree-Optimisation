@@ -1,4 +1,4 @@
-# Algorithms for Desicion Tree Optimisation
+# Algorithms for Decision Tree Optimisation
 
 This repo complements my UG4 project. It contains tree and node libraries, as well as a whole host of algorithms for decision tree construction and general data gathering for truth tables and decision trees.
 
