@@ -20,32 +20,33 @@ Depth: 3
 Size: 7
 
 Here is a simple truth table:
-[1, 2, 3] f
-[1, 0, 1][0]
-[1, 1, 0][1]
-[0, 0, 1][0]
-[1, 0, 0][1]
-[1, 1, 1][0]
-[0, 0, 0][0]
+[1, 2, 3, 4] f
+[0, 0, 1, 1][0]
+[0, 0, 0, 1][1]
+[0, 0, 0, 0][0]
+[1, 1, 0, 1][1]
+[1, 0, 1, 0][0]
 
 Trees can be generated from truth tables using the algorithms in algos.py:
- 1_  
-/  \ 
-F  3 
-  / \
-  T F 
+  _3 
+ /  \
+ 4  F
+/ \  
+F T  
+^tree created by the optimal algorithm
 
- 1___    
-/    \   
-F   _2_  
-   /   \ 
-   3   3 
-  / \ / \
-  T F T F 
+    _2 
+   /  \
+  _3  T
+ /  \  
+ 4  F  
+/ \    
+F T    
+^tree created by the c45 algorithm
 
 
 algos.py has some useful functions beyond tree construction:
 The truth table above can be represented by...
-   -10 distinct trees.
+   -52 distinct trees.
    -2 distinct optimal trees.
 ```
