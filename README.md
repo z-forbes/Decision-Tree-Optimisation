@@ -4,7 +4,7 @@ This repo complement my UG4 project. It contains tree and node libraries, as wel
 
 The file ``demo.py`` can be used to ensure everything is running as it should be, and highlights the capabilities of this repo.
 
-The output for this file should be:
+The output of this file should be:
 
 ```
 Here is a simple tree:
