@@ -581,7 +581,7 @@ def gen_optimal(truth_table):
     rs = [r for r in range(len(truth_table))]         # [0,...]
     return subgen(xs, rs, len(xs)+1, len(rs))
 
-# tt = [[0, 1, 1, 0, 0, 1], [0, 1, 1, 1, 0, 0], [0, 1, 0, 0, 1, 0], [1, 1, 0, 0, 1, 1], [0, 0, 1, 0, 0, 1], [1, 0, 1, 0, 1, 0], [0, 1, 1, 1, 0, 1], [0, 0, 0, 0, 1, 1], [1, 1, 0, 0, 0, 0], [0, 1, 1, 0, 1, 1], [1, 1, 1, 0, 1, 0], [0, 0, 0, 0, 1, 0], [1, 0, 1, 1, 1, 0], [0, 1, 1, 1, 1, 1], [1, 0, 0, 1, 1, 0], [0, 0, 1, 1, 0, 1]]
+
 # generates all plausable trees for a given table
 def gen_trees(truth_table):
     # tt_valid(truth_table)

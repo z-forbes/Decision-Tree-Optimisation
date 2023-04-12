@@ -38,7 +38,8 @@ def tt_gen(xs, rows):
 
 def print_tt(ttt):
     tt = [row.copy() for row in ttt] #deep copy
-    print([x for x in range(1,len(tt[0]))])
+    print([x for x in range(1,len(tt[0]))], end="")
+    print(" f")
     for row in tt:
         if len(tt[0])>10:
             row[10:] = [str(e)+"." for e in row[10:]]
@@ -104,3 +105,4 @@ def algo_works(algo, tests=10, tt_size=5):
 def verify(t, tt):
     if not t.eval_table(tt):
         raise Exception("tree not valid representation of truth table")
+    return True
