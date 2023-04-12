@@ -402,7 +402,7 @@ def opt_runtime_comparison(save=True):
 
     plt.legend()
     if save:
-        fname = "id3_optimal_rt.png"
+        fname = "id3_optimal_rt_small.png"
         plt.savefig(save_dir() + fname)
         print(fname + " saved.")
     else:
