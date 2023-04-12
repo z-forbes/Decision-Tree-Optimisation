@@ -102,7 +102,7 @@ def truth_table(do_output=True):
     return tt
 
 def big_tree(do_output=True):
-    tree = topdown(truth_table(False))
+    tree = worst_case(truth_table(False))
     if do_output:
         output(tree_to_latex(tree))
     return tree
@@ -447,7 +447,7 @@ def id3_vs_optimal(save=True):
         plt.show()
     plt.close()
 
-def id3_vs_topdown(save=True):
+def id3_vs_worst_case(save=True):
     def get_data(min_xs, max_xs, tests, heuristic):
         output=[]
         for xs in range(min_xs, max_xs+1):
@@ -464,7 +464,7 @@ def id3_vs_topdown(save=True):
     plt.ylabel("Tree size (nodes)")
     plt.title("[rs=(2^xs)/2, {}: {}]".format(precision(), tests))
 
-    for h in [id3,topdown]:
+    for h in [id3,worst_case]:
         print("\n"+h.__name__.upper())
         data = get_data(4,12, tests, h)
         l = h.__name__
@@ -593,7 +593,7 @@ def heuristic_training_gen(save=True):
             output.append((rs, current/tests))
         return output
 
-    for h in [id3, c45, cart, topdown]:
+    for h in [id3, c45, cart, worst_case]:
         for xs in range(5, 15+1):
             tests = 300
             step = 0.05
@@ -665,7 +665,7 @@ def topdown_comp(save=True):
     plt.show()
 
 def coeffs1_eval(save=True):
-    alg_as = [(topdown, 1.58), (id3, 1.02), (c45, 1.02), (cart, 1.02)]
+    alg_as = [(worst_case, 1.58), (id3, 1.02), (c45, 1.02), (cart, 1.02)]
     b = 0.7
     
 
@@ -697,7 +697,7 @@ def coeffs1_eval(save=True):
         print(output)
 
 def coeffs2_eval(save=True):
-    alg_bs = [(topdown, 0.78), (id3, 0.72), (c45, 0.71), (cart, 0.71), (optimal,0.65)]
+    alg_bs = [(worst_case, 0.78), (id3, 0.72), (c45, 0.71), (cart, 0.71), (optimal,0.65)]
     a = 1
 
     tests = 10000
@@ -757,7 +757,7 @@ def coeffs2_eval(save=True):
 # h_performance_bar3()
 # h_runtime_comparison()
 # opt_runtime_comparison()
-# id3_vs_topdown()
+# id3_vs_worst_case()
 # id3_vs_optimal()
 # id3_misclassification()
 # id3_vs_double_id3()

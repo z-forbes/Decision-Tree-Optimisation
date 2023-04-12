@@ -35,7 +35,7 @@ algorithms.append(optimal)
 algorithms.append(c45)
 # algorithms.append(cart)
 # algorithms.append(double_id3)
-# algorithms.append(topdown) # the worst-case algorithm
+algorithms.append(worst_case)
 
 for a in algorithms:
     t = a(tt)
