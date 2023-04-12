@@ -43,7 +43,7 @@ for t in trees:
 
 
 print("\nalgos.py has some useful functions beyond tree construction:")
-print("The truth table above has...")
+print("The truth table above can be represented by...")
 
 print("   -{} distinct trees.".format(count_trees(tt)))
 assert count_trees(tt)==len(gen_trees(tt))
