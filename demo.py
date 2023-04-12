@@ -51,3 +51,4 @@ print("   -{} distinct trees.".format(count_trees(tt)))
 assert count_trees(tt)==len(gen_trees(tt))
 
 print("   -{} distinct optimal trees.".format(len(gen_optimal(tt))))
+
