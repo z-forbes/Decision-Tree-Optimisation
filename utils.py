@@ -105,4 +105,3 @@ def algo_works(algo, tests=10, tt_size=5):
 def verify(t, tt):
     if not t.eval_table(tt):
         raise Exception("tree not valid representation of truth table")
-    return True

@@ -39,7 +39,7 @@ algorithms.append(c45)
 
 for a in algorithms:
     t = a(tt)
-    assert verify(t, tt)
+    assert t.eval_table(tt)
     print(t)
     print("^tree created by the {} algorithm\n".format(a.__name__))
 
