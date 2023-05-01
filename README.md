@@ -2,7 +2,7 @@
 
 This repo complements my UG4 project *Exploring Descriptive Decision Trees: Construction and Analysis*. It contains tree and node libraries, as well as a whole host of algorithms for decision tree construction and general data gathering for truth tables and decision trees.
 
-The file ``demo.py`` can be used to ensure everything is running as it should be, and highlights the capabilities of this repo.
+The file [``demo.py``](/demo.py) can be used to ensure everything is running as it should be, and highlights the capabilities of this repo.
 
 The output of this file should be:
 
