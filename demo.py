@@ -55,6 +55,7 @@ print("   -{} distinct optimal trees.".format(len(gen_optimal(tt))))
 
 print("\n\nfailures.txt contains examples of truth tables for which the optimal algorithm raises an exception:\n")
 failure = parse_failures()[0]
+print("Finding optimal tree from the following truth table:")
 print_tt(failure)
 try:
     optimal(failure)
