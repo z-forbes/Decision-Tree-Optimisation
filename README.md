@@ -51,4 +51,19 @@ algos.py has some useful functions beyond tree construction:
 The truth table above can be represented by...
    -52 distinct trees.
    -2 distinct optimal trees.
+
+
+failures.txt contains examples of truth tables for which the optimal algorithm raises an exception:
+
+There was an error!
+[1, 2, 3, 4, 5, 6] f
+[0, 1, 1, 0, 0, 0][0]
+[1, 0, 1, 0, 1, 0][0]
+[1, 0, 1, 1, 0, 0][0]
+[1, 1, 1, 1, 0, 1][0]
+[0, 0, 1, 0, 0, 0][1]
+[0, 0, 1, 1, 1, 0][1]
+[0, 1, 0, 0, 0, 1][1]
+[0, 1, 1, 1, 0, 0][1]
+[1, 1, 1, 0, 0, 1][1]
 ```
