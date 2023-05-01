@@ -4,14 +4,14 @@ from random import randint, shuffle
 from ast import literal_eval
 
 def gen_failures():
-    for i in range(100):
-        print(i)
+    for i in range(1000):
+        # print(i)
         xs = 6
-        tt = tt_gen(xs, int((2**xs)/3))
+        tt = tt_gen(xs, 11)
         try:
             optimal(tt)
         except:
-            print("failure found : " + str(tt))
+            print("failure found: " + str(tt))
             f = open("failures.txt", "a")
             f.write(str(tt) + "\n")
             f.close
@@ -38,15 +38,18 @@ def shorten_failure(fail):
             return shorten_failure(new)
     return fail
          
-# converts each tt in failures.txt to a shortened form   
+# converts each tt in failures.txt to a shortened, sorted form   
 def shorten_failures():
     output = ""
     tts = parse_failures()
     for tt in tts:
-        output += str(shorten_failure(tt)) + "\n"
+        tt = shorten_failure(tt)
+        tt.sort()
+        output += str(tt) + "\n"
     f = open("failures.txt", "w")
     f.write(output)
     f.close()
 
-# gen_failures()
+gen_failures()
 shorten_failures()
+print("done")
