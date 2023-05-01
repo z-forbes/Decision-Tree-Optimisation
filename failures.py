@@ -50,6 +50,6 @@ def shorten_failures():
     f.write(output)
     f.close()
 
-gen_failures()
-shorten_failures()
-print("done")
+# gen_failures()
+# shorten_failures()
+# print("done")

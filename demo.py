@@ -2,6 +2,7 @@ from Node import *
 from Tree import * 
 from algos import *
 from utils import *
+from failures import parse_failures
 
 print("Here is a simple tree:")
 root = Node(1)
@@ -52,3 +53,11 @@ assert count_trees(tt)==len(gen_trees(tt))
 
 print("   -{} distinct optimal trees.".format(len(gen_optimal(tt))))
 
+print("\n\nfailures.txt contains examples of truth tables for which the optimal algorithm raises an exception:\n")
+failure = parse_failures()[0]
+print_tt(failure)
+try:
+    optimal(failure)
+    print("\nAll good, no error!")
+except:
+    print("\nThere was an error!")
