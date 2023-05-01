@@ -55,7 +55,7 @@ The truth table above can be represented by...
 
 failures.txt contains examples of truth tables for which the optimal algorithm raises an exception:
 
-There was an error!
+Finding optimal tree from the following truth table:
 [1, 2, 3, 4, 5, 6] f
 [0, 1, 1, 0, 0, 0][0]
 [1, 0, 1, 0, 1, 0][0]
@@ -66,4 +66,6 @@ There was an error!
 [0, 1, 0, 0, 0, 1][1]
 [0, 1, 1, 1, 0, 0][1]
 [1, 1, 1, 0, 0, 1][1]
+
+There was an error!
 ```
